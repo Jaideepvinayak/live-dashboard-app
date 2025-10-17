@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // This is the URL of the API you are running locally
-    const API_URL = 'http://Jaideepvinayak.pythonanywhere.com/api/news';
+    const API_URL = 'https://Jaideepvinayak.pythonanywhere.com/api/news';
 
     const container = document.getElementById('headlines-container');
 
