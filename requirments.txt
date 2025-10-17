@@ -1,0 +1,9 @@
+Flask
+requests
+beautifulsoup4
+firebase-admin
+flask-cors
+selenium
+webdriver-manager
+nltk
+gunicorn
