@@ -5,51 +5,39 @@ body {
     margin: 0;
     line-height: 1.6;
 }
-
 header {
     text-align: center;
     padding: 20px;
     background-color: #2C2C2C;
     border-bottom: 4px solid #FF7A00;
 }
-
-h1 {
-    color: #FF7A00;
-}
-
+h1 { color: #FF7A00; }
 main {
     max-width: 800px;
     margin: 30px auto;
     padding: 0 20px;
 }
-
 .loading-message {
     text-align: center;
     font-size: 1.2em;
     color: #888;
 }
-
 .headline-card {
     background-color: #2C2C2C;
     border: 2px solid #333;
     padding: 20px;
     margin-bottom: 15px;
     border-radius: 5px;
-    transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    transition: transform 0.2s, border-color 0.2s;
 }
-
 .headline-card:hover {
     transform: translateY(-5px);
     border-color: #FF7A00;
 }
-
 .headline-card a {
     text-decoration: none;
     color: #EEEEEE;
     font-size: 1.25em;
     font-weight: bold;
 }
-
-.headline-card a:hover {
-    text-decoration: underline;
-}
+.headline-card a:hover { text-decoration: underline; }

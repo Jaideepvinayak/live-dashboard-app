@@ -16,20 +16,15 @@ except Exception as e:
 
 # --- Flask App Initialization ---
 app = Flask(__name__)
-CORS(app) # Allows your frontend to request data from this API
+CORS(app)
 
-# --- API Endpoint ---
+# --- API Endpoint for News ---
 @app.route("/api/news", methods=["GET"])
 def get_news():
-    """Fetches the latest headlines from the Firestore database."""
     try:
         doc_ref = db.collection("news").document("latest_headlines")
         doc = doc_ref.get()
-
-        if doc.exists:
-            return jsonify(doc.to_dict())
-        else:
-            return jsonify({"error": "No headlines found in database"}), 404
+        return jsonify(doc.to_dict()) if doc.exists else (jsonify({"error": "No headlines found"}), 404)
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
